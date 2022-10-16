@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- GITHUB.COM/OSSAG --> 
+<!-- HELLO! --> 
+<head>
+  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pstbin.io</title>
+</head>
+<body>
+    <div class="container">
+   <h1>Type your pastebin code in box below.</h1>
+    <form id="form" onsubmit="return false;">
+        <input type="text" id="userInput" />
+        <input type="submit" onclick="whatpastebin();" value="Go to that pastebin" id="knapp" />
+    </form>
+</div>
+    <script>  
+function whatpastebin() {
+    var input = document.getElementById("userInput").value;
+    var inlength = input.length
+if (inlength =="8") {
+    window.location.href = "http://www.pastebin.com/" +input;
+} else {alert("A pastebin code should be 8 characters long. For example 7Xtdt9F1.")}
+}
+</script>
+</body>
+</html>
+
